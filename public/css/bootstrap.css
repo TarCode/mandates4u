@@ -3,10 +3,10 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: 'Fjalla One';
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
