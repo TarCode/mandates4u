@@ -12,6 +12,14 @@
  * Released under the MIT license - http://opensource.org/licenses/MIT
  */
 /* kenBurns animations, very basic */
+label{
+  font-size: large;
+}
+#email{
+  height: 2.5em;
+  font-size: large;
+  width: 20em;
+}
 @-webkit-keyframes left-right {
   0% {
     -moz-transform: translateY(-20%) translateX(-10%);
