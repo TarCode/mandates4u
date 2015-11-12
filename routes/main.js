@@ -17,10 +17,18 @@ exports.captureEmail = function (req, res){
              });
              return;
          }
-         connection.query('insert into users set ?', data, function(err, results) {
-             if (err) return next(err);
+         connection.query('SELECT * FROM users WHERE email = ?', data.email, function(err, results) {
+           if (err) return next(err);
+           if(results.length === 0){
+             connection.query('insert into users set ?', data, function(err, results) {
+                 if (err) return next(err);
 
-             res.render('home', {msg:"Successfully signed up"});
+                 res.render('home', {msg:"Successfully signed up"});
+             });
+           }
+           else{
+                res.render('home', {msg:"Email already exists"});
+           }
          });
    });
 
